@@ -1,5 +1,6 @@
 # sliced
-The stream slicer (useful for parallel testing)
+
+The stream slicer (useful for parallel testing) [![Go](https://github.com/udzura/sliced/actions/workflows/go.yml/badge.svg)](https://github.com/udzura/sliced/actions/workflows/go.ym)
 
 ## Install
 
