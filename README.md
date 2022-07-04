@@ -83,4 +83,4 @@ $ find test -name 'test_*.rb' | sort | sliced -n 20 -i 10 --seed 123 | wc -l
 
 ## License
 
-MIT
+Apache License 2.0
