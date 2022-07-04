@@ -13,6 +13,8 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
+const VERSION = "0.1.0"
+
 func actionSliced(c *cli.Context) error {
 	total := c.Int("n")
 	if total < 1 {
@@ -71,8 +73,9 @@ func actionSliced(c *cli.Context) error {
 
 func main() {
 	app := &cli.App{
-		Name:  "sliced",
-		Usage: "Stream to slice generator cli",
+		Name:    "sliced",
+		Usage:   "Stream to slice generator cli",
+		Version: VERSION,
 		Flags: []cli.Flag{
 			&cli.IntFlag{
 				Name:     "n",
