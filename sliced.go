@@ -56,7 +56,7 @@ func actionSliced(c *cli.Context) error {
 
 	start := math.Ceil(float64(len(stream)) / float64(total) * float64(index))
 	end := math.Ceil(float64(len(stream)) / float64(total) * float64(index+1))
-	log.Printf("start: %d end:%d ", start, end)
+	log.Printf("start: %v end:%v", start, end)
 	part := indexes[int(start):int(end)]
 
 	result := make([]string, 0)
