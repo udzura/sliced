@@ -15,3 +15,5 @@
 # vendor/
 
 sliced
+
+pkg/*
