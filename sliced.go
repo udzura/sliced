@@ -13,7 +13,7 @@ import (
 	cli "github.com/urfave/cli/v2"
 )
 
-const VERSION = "0.1.0"
+const VERSION = "0.1.1"
 
 func actionSliced(c *cli.Context) error {
 	total := c.Int("n")
