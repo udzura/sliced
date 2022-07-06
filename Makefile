@@ -12,6 +12,7 @@ pkg: build
 	docker cp $(cid):'/app/build/sliced-linux-arm64' pkg/sliced-linux-arm64-$(VERSION)
 	docker cp $(cid):'/app/build/sliced-darwin-arm64' pkg/sliced-darwin-arm64-$(VERSION)
 	docker cp $(cid):'/app/build/sliced-darwin-amd64' pkg/sliced-darwin-amd64-$(VERSION)
+	docker rm -f $(cid)
 
 .PHONY: clean
 clean:
