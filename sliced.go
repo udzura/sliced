@@ -56,7 +56,7 @@ func actionSliced(c *cli.Context) error {
 
 	start := math.Ceil(float64(len(stream)) / float64(total) * float64(index))
 	end := math.Ceil(float64(len(stream)) / float64(total) * float64(index+1))
-	log.Printf("start: %v end:%v", start, end)
+	log.Printf("start: %v end:%v total:%v", start, end, len(stream))
 	part := indexes[int(start):int(end)]
 
 	result := make([]string, 0)
@@ -65,6 +65,9 @@ func actionSliced(c *cli.Context) error {
 	}
 
 	for _, ln := range result {
+		if os.Getenv("DEBUG") == "1" {
+			fmt.Fprintf(os.Stderr, "output: %s\n", ln)
+		}
 		fmt.Printf("%s\n", ln)
 	}
 
